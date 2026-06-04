@@ -1,0 +1,67 @@
+<div class="dashboard">
+
+  <!-- HOURLY FORECAST -->
+  <div class="hourly-section">
+    <div class="hourly-scroll">
+      <div class="hourly-card" *ngFor="let h of hourlyList">
+        <p class="hourly-card__time">{{ h.dt_txt | date:'h:mm a' }}</p>
+        <img *ngIf="h.weather?.[0]?.icon" [src]="getIconUrl(h.weather[0].icon)" [alt]="h.weather?.[0]?.description" />
+        <p class="hourly-card__condition">{{ h.weather?.[0]?.description }}</p>
+        <p class="hourly-card__temp">{{ h.main?.temp | number:'1.0-0' }}°</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5-DAY FORECAST -->
+  <div class="forecast-section">
+    <h6 class="section-title">5-day forecast</h6>
+    <app-forecast-card
+      *ngFor="let day of fiveDayList"
+      [day]="getDay(day.dt_txt)"
+      [icon]="day.weather?.[0]?.icon ? getIconUrl(day.weather[0].icon) : ''"
+      [condition]="day.weather?.[0]?.description"
+      [temp]="day.main?.temp"
+      [barWidth]="getBarWidth(day.main?.temp)"
+    />
+  </div>
+
+  <!-- HIGHLIGHTS -->
+  <div class="highlights-section" *ngIf="highlights">
+    <h6 class="section-title">Today's highlights</h6>
+    <div class="row g-3">
+      <div class="col-6">
+        <app-highlight-card
+          label="Wind"
+          [value]="highlights.wind"
+          unit="m/s"
+          icon="assets/images/icons/wind.svg"
+        />
+      </div>
+      <div class="col-6">
+        <app-highlight-card
+          label="Humidity"
+          [value]="highlights.humidity"
+          unit="%"
+          icon="assets/images/icons/humidity.svg"
+        />
+      </div>
+      <div class="col-6">
+        <app-highlight-card
+          label="Visibility"
+          [value]="highlights.visibility"
+          unit="km"
+          icon="assets/images/icons/visibility.svg"
+        />
+      </div>
+      <div class="col-6">
+        <app-highlight-card
+          label="Pressure"
+          [value]="highlights.pressure"
+          unit="hPa"
+          icon="assets/images/icons/pressure.svg"
+        />
+      </div>
+    </div>
+  </div>
+
+</div>

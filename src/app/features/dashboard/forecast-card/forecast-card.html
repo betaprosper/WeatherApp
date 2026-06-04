@@ -1,0 +1,9 @@
+<div class="forecast-row">
+  <span class="forecast-row__day">{{ day }}</span>
+  <img [src]="icon" [alt]="condition" class="forecast-row__icon" />
+  <span class="forecast-row__condition">{{ condition }}</span>
+  <span class="forecast-row__temp">{{ temp | number:'1.0-0' }}°</span>
+  <div class="forecast-row__bar-track">
+    <div class="forecast-row__bar" [style.width.%]="barWidth"></div>
+  </div>
+</div>

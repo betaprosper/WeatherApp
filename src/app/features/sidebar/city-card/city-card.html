@@ -1,0 +1,11 @@
+<div class="city-card">
+  <div class="city-card__left">
+    <p class="city-card__country">{{ country }}</p>
+    <h5 class="city-card__name">{{ city }}</h5>
+    <p class="city-card__condition">{{ condition }}</p>
+  </div>
+  <div class="city-card__right">
+    <img *ngIf="icon" [src]="'https://openweathermap.org/img/wn/' + icon + '@2x.png'" [alt]="condition" width="40" />
+    <span class="city-card__temp">{{ temp | number:'1.0-0' }}°</span>
+  </div>
+</div>

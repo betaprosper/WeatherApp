@@ -1,0 +1,25 @@
+<div class="weather-card">
+  <div class="weather-card__top">
+    <h1 class="weather-card__temp">{{ temp }}°</h1>
+    <div class="text-end">
+      <h5 class="weather-card__city">{{ city }}</h5>
+      <p class="weather-card__time">{{ time }}</p>
+    </div>
+  </div>
+
+  <div class="weather-card__middle">
+    <div class="d-flex align-items-center gap-2">
+      <img *ngIf="data" [src]="iconUrl" [alt]="condition" class="weather-card__icon" />
+      <span class="weather-card__condition">{{ condition }}</span>
+    </div>
+    <div class="d-flex align-items-center gap-2">
+      <span>💨</span>
+      <span>{{ windSpeed }} m/s</span>
+    </div>
+  </div>
+
+  <div class="weather-card__bottom">
+    <p>Feel like: {{ feelsLike }} °{{ unit }}</p>
+    <p>{{ minTemp }}° to {{ maxTemp }}°</p>
+  </div>
+</div>

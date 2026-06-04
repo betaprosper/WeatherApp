@@ -1,0 +1,18 @@
+<div class="sidebar">
+  <app-current-weather
+    [unit]="unit"
+    [data]="currentWeather"
+  />
+
+  <div class="other-cities">
+    <h6 class="other-cities__title">Other large cities</h6>
+    <app-city-card
+      *ngFor="let c of otherCities"
+      [country]="c.sys?.country"
+      [city]="c.name"
+      [condition]="c.weather?.[0]?.description"
+      [temp]="c.main?.temp"
+      [icon]="c.weather?.[0]?.icon"
+    />
+  </div>
+</div>

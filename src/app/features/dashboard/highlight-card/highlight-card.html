@@ -1,0 +1,10 @@
+<div class="highlight-card">
+  <div class="highlight-card__header">
+    <span class="highlight-card__label">{{ label }}</span>
+    <img [src]="icon" [alt]="label" width="20" />
+  </div>
+  <div class="highlight-card__value">
+    {{ value | number:'1.0-1' }}
+    <span class="highlight-card__unit">{{ unit }}</span>
+  </div>
+</div>

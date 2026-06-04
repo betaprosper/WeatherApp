@@ -1,0 +1,13 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 16px;
+  height: 100%;
+}
+
+.other-cities__title {
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 12px;
+}

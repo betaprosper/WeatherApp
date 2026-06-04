@@ -1,0 +1,17 @@
+.app-container {
+  min-height: 100vh;
+  background-color: #13151f;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  border-radius: 20px;
+  margin: 20px;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  color: #6b7280;
+  font-size: 18px;
+}

@@ -1,0 +1,50 @@
+.forecast-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #1e2433;
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.forecast-row__day {
+  width: 48px;
+  font-size: 14px;
+  color: #d1d5db;
+}
+
+.forecast-row__icon {
+  width: 36px;
+  height: 36px;
+}
+
+.forecast-row__condition {
+  flex: 1;
+  font-size: 13px;
+  color: #9ca3af;
+  text-transform: capitalize;
+}
+
+.forecast-row__temp {
+  width: 40px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: right;
+}
+
+.forecast-row__bar-track {
+  flex: 1;
+  height: 6px;
+  background-color: #2d3447;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.forecast-row__bar {
+  height: 100%;
+  background-color: #3b82f6;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}

@@ -1,0 +1,25 @@
+.form-control::placeholder {
+  color: #6b7280;
+}
+
+.form-control:focus {
+  background-color: #1e2433 !important;
+  box-shadow: none;
+  color: #fff;
+}
+
+.btn-unit {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  background-color: #1e2433;
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+}
+
+.btn-unit.active {
+  background-color: #fff;
+  color: #1e2433;
+}
